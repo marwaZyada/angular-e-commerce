@@ -10,6 +10,7 @@ import { CategoriesComponent } from './Components/categories/categories.componen
 import { BrandsComponent } from './Components/brands/brands.component';
 
 const routes: Routes = [
+  {path:"" ,redirectTo:"signin" ,pathMatch:"full",component:SigninComponent},
   {path:"signin" ,component:SigninComponent},
   {path:"signout" ,component:SignoutComponent},
   {path:"register" ,component:RegisterComponent},
