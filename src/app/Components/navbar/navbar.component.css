@@ -1,0 +1,16 @@
+nav{
+    z-index: 999;
+}
+
+.text-green{
+    color: var(--green);
+}
+.bg-gray{
+background-color: var(--lightGray);
+}
+.social{
+    margin-top: 1.5rem;
+}
+img{
+    margin-bottom: 10px;
+}

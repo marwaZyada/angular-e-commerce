@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-gray position-fixed start-0 top-0 w-100">
+    <div class="container">
+      <a class="navbar-brand text-capitalize fs-1 fw-bold" href="#"><img src="./../../../assets/freshcart-logo.svg" width="200" alt=""/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-capitalize fs-4" *ngIf="_dataService.token">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="home" routerLinkActive="active">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="cart" routerLinkActive="active">cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="product" routerLinkActive="active">product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="categories" routerLinkActive="active">categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="brands" routerLinkActive="active">brands</a>
+          </li>
+          
+          </ul>
+          
+     
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2 text-dark">
+        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href=""><i class="fa-brands fa-youtube me-2"></i></a></li>
+      </ul>
+      <ul class="navbar-nav gap-2 text-capitalize  fs-5">
+        <li *ngIf="!_dataService.token" class="nav-item">
+          <a class="nav-link" routerLink="register"  routerLinkActive="active">register</a>
+        </li>
+          <li *ngIf="!_dataService.token" class="nav-item">
+            <a class="nav-link" routerLink="signin"  routerLinkActive="active">signIn</a>
+          </li>
+          <li *ngIf="_dataService.token" class="nav-item">
+            <a class="nav-link" routerLink="signout"  routerLinkActive="active" (click)="_dataService.logout()">signOut</a>
+          </li>
+      </ul>
+    </div>
+    </div>
+  </nav>

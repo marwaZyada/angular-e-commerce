@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@500;700&display=swap');
+
+
+:root{
+    --green:rgb(68, 194, 68);
+    --lightGray:rgb(246, 247, 250);
+    --fontFamily:'Encode Sans Semi Expanded', sans-serif;
+    --btnHover:rgb(32, 110, 32)
+
+
+}
+body{
+font-family: var(--fontFamily);
+}
+.active{
+    font-weight: 800;
+    color: black;
+}
+
+/* ul{
+    list-style: none;
+} */
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+a:hover{
+    color: black;
+}

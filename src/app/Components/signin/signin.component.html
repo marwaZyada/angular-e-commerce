@@ -1,0 +1,16 @@
+<div class="container">
+    <form action="" class="w-75 mx-auto py-5" [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+    <p class="text-capitalize fs-3" >register now:</p>
+    <label for="" class="text-capitalize">email:</label>
+    <input type="email" class="form-control mb-1" formControlName="email">
+  <div class="alert alert-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.status=='INVALID'">
+<p *ngIf="loginForm.get('email')?.getError('required')">  is required</p>
+</div>
+    <label for="" class="text-capitalize">password:</label>
+    <input type="password" class="form-control mb-1" formControlName="password">
+    <div class="alert alert-danger" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.status=='INVALID'">
+    <p *ngIf="loginForm.get('password')?.getError('required')">  is required</p>
+    </div>
+    <button type="submit" class="btn mt-3  d-block ms-auto text-capitalize text-white" >login</button>
+</form>
+</div>
