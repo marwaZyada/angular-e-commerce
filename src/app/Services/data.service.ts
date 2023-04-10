@@ -4,14 +4,23 @@ import { Observable } from 'rxjs';
 import { User } from '../Interfaces/user';
 import { LoginUser } from '../Interfaces/login-user';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-baseUrl:string="https://route-ecommerce.onrender.com";
-token:string=""
-  constructor(private _httpClient:HttpClient,private _router:Router) { }
+baseUrl=environment.baseUrl;
+token:string="";
+
+
+  constructor(private _httpClient:HttpClient,private _router:Router) { 
+    if(localStorage.getItem('token')!=null){
+      this.token=localStorage.getItem('token')||"";
+      this._router.navigate(['home'])
+    }
+  }
 
 
   register(data:User) : Observable<any>{
@@ -27,4 +36,7 @@ token:string=""
     localStorage.setItem("token","")
     this._router.navigate(["/signin"]);
   }
+
+
+
 }

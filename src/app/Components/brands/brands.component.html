@@ -1,1 +1,15 @@
-<p>brands works!</p>
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="spinner-border " role="status" *ngIf="brands.length==0 ; else show">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <ng-template #show>
+<div class="row">
+    <div class="col-3" *ngFor="let brand of brands">
+        <div class="content text-center">
+            <img [src]="brand.image" alt="" class="w-100">
+            <h3>{{brand.name}}</h3>
+        </div>
+    </div>
+</div>
+    </ng-template>

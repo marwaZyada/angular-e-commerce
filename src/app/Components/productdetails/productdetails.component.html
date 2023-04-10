@@ -1,0 +1,28 @@
+<div class="product-details">
+<div class="row align-items-center">
+    <div class="col-lg-5 ">
+        
+        <owl-carousel-o [options]="customOptions" >
+
+            <ng-container *ngFor="let img of product?.images">
+              <ng-template carouselSlide>
+                <img [src]="img" >
+              </ng-template>
+            </ng-container>
+        
+          </owl-carousel-o>
+        </div>
+    
+    <div class="col-lg-7">
+        <h2>{{product?.title}}</h2>
+        
+        <p class="fs-6 text-secondary my-2">{{product?.description}}</p>
+        <h6 class="mt-1 ">{{product?.category.name}}</h6>
+        <div class="d-flex justify-content-between align-items-center px-1">
+            <h5>{{product?.price |currency}}</h5>
+            <h5><i class="fa-solid fa-star text-yellow"></i>{{product?.ratingsAverage}}</h5>
+        </div>
+        <button class="btn text-white text-capitalize w-100" (click)="addToCart(product.id)">add to cart</button>
+    </div>
+</div>
+</div>

@@ -1,1 +1,19 @@
-<p>categories works!</p>
+<div class="d-flex justify-content-center align-items-center mt-5"*ngIf="categories.length==0;else show">
+    <div class="spinner-border " role="status" >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <ng-template #show>
+<div class="row">
+    <div class="col-3" *ngFor="let category of categories">
+<div>
+    <img [src]="category.image" alt=""class="w-100">
+    <h4>{{category.name}}</h4>
+  
+
+</div>
+
+
+    </div>
+</div>
+    </ng-template>

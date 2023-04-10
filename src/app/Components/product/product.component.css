@@ -1,0 +1,12 @@
+button{
+    background-color: var(--green);
+    transform: translateY(102%);
+    opacity: 0;
+    -webkit-transform: translateY(102%);
+    -moz-transform: translateY(102%);
+    -ms-transform: translateY(102%);
+    -o-transform: translateY(102%);
+}
+.btn:hover{
+    background-color: var(--btnHover)
+}

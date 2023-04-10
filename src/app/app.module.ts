@@ -13,8 +13,15 @@ import { ProductComponent } from './Components/product/product.component';
 import { CategoriesComponent } from './Components/categories/categories.component';
 import { BrandsComponent } from './Components/brands/brands.component';
 import {HttpClientModule} from '@angular/common/http'
-import{ ReactiveFormsModule} from '@angular/forms';
-import { FooterComponent } from './Components/footer/footer.component'
+import{ FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FooterComponent } from './Components/footer/footer.component';
+import { NotfoundComponent } from './Components/notfound/notfound.component';
+import { ProductdetailsComponent } from './Components/productdetails/productdetails.component';
+import { ProductsComponent } from './Components/products/products.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SearchPipe } from './pipes/search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +34,21 @@ import { FooterComponent } from './Components/footer/footer.component'
     ProductComponent,
     CategoriesComponent,
     BrandsComponent,
-    FooterComponent
+    FooterComponent,
+    NotfoundComponent,
+    ProductdetailsComponent,
+    ProductsComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

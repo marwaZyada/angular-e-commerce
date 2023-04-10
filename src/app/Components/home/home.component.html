@@ -1,1 +1,20 @@
-<p>home works!</p>
+
+<div class="row">
+    <div class="col-lg-9 p-0">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide><img src="../../../assets/images/slider-image-3.jpeg" alt="" class="w-100 image"></ng-template>  
+            <ng-template carouselSlide><img src="../../../assets/images/slider-image-2.jpeg" alt="" class="w-100 image"></ng-template>  
+            <ng-template carouselSlide><img src="../../../assets/images/slider-image-1.jpeg" alt="" class="w-100 image"></ng-template>  
+          </owl-carousel-o>
+    </div>
+    <div class="col-lg-3 px-0 ">
+        <img src="../../../assets/images/grocery-banner-2.jpeg" class="w-100" alt="">
+        <img src="../../../assets/images/grocery-banner.png"class="w-100" alt="">
+    </div>
+</div>
+<div>
+    <input type="text" class="w-75 form-control mx-auto" [(ngModel)]="searchItem" placeholder="search by product title">
+</div>
+
+<app-products [search]="searchItem"></app-products>
+

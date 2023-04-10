@@ -7,7 +7,8 @@
     --green:rgb(68, 194, 68);
     --lightGray:rgb(246, 247, 250);
     --fontFamily:'Encode Sans Semi Expanded', sans-serif;
-    --btnHover:rgb(32, 110, 32)
+    --btnHover:rgb(32, 110, 32);
+    --yellow:rgb(223, 223, 41);
 
 
 }
@@ -29,4 +30,37 @@ a{
 }
 a:hover{
     color: black;
+}
+.text-green{
+    color: var(--green);
+}
+.text-yellow{
+    color:var(--yellow);
+}
+button{
+    background-color: var(--green)!important;
+}
+.btn:hover{
+    background-color: var(--btnHover)!important;
+}
+
+.product{
+    transition: .5s;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.product:hover{
+    border: 1px solid black;
+}
+ 
+.product:hover button{
+ opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
 }
