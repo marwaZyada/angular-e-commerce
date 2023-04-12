@@ -1,0 +1,27 @@
+<div class="orders text-capitalize">
+
+    <table class="table table-striped">
+        <thead>
+       
+        <th>title</th>
+        <th>name</th>
+        <th>picture</th>
+        <th>count</th>
+        <th>price</th>
+        <th>delevered</th>
+        <th>paid</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders" class="p-3">
+            <td   ><tr  *ngFor="let cart of order.cartItems"class="row-h"><td>{{cart.product.title}}</td></tr></td>
+            <td  ><tr *ngFor="let cart of order.cartItems"class="row-h"><td>{{cart.product.category.name}}</td></tr></td>
+            <td  ><tr *ngFor="let cart of order.cartItems"class="row-h"><td><img [src]="cart.product.imageCover"width="50" height="50" alt=""></td></tr> </td>
+            <td  ><tr *ngFor="let cart of order.cartItems"class="row-h"><td>{{cart.count}}</td></tr></td>
+            <td  ><tr *ngFor="let cart of order.cartItems"class="row-h"><td>{{cart.price}}</td></tr></td> 
+            
+            <td>{{order.isDelivered}}</td>
+            <td>{{order.isPaid}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,10 @@
+<form action="" class="w-75 mx-auto text-capitalize mt-5" (ngSubmit)="formSubmit(orderForm,id)" [formGroup]="orderForm">
+
+    <label for="">details</label>
+    <input type="text" class="form-control" formControlName="details">
+    <label for="">phone</label>
+    <input type="text" class="form-control" formControlName="phone">
+    <label for="">city</label>
+    <input type="text"class="form-control" formControlName="city">
+    <button class="btn btn-primary text-capitalize mt-5 ms-auto d-block">checkout</button>
+</form>

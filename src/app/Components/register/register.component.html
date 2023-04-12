@@ -37,6 +37,7 @@
 
     <div class="alert alert-danger" *ngIf="registerform.get('phone')?.touched && registerform.get('phone')?.status=='INVALID'">
         <p *ngIf="registerform.get('phone')?.getError('required')">phone is required</p>
+        <p *ngIf="registerform.get('phone')?.getError('pattern')">phone must be 11 numbers</p>
     </div>
 
     <button type="submit" class="btn mt-3  d-block ms-auto text-capitalize text-white" >register</button>

@@ -18,7 +18,7 @@ token:string="";
   constructor(private _httpClient:HttpClient,private _router:Router) { 
     if(localStorage.getItem('token')!=null){
       this.token=localStorage.getItem('token')||"";
-      this._router.navigate(['home'])
+      // this._router.navigate(['/home'])
     }
   }
 

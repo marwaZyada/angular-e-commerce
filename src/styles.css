@@ -64,3 +64,6 @@ button{
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
 }
+.bg-green{
+    background-color: var(--green);
+}

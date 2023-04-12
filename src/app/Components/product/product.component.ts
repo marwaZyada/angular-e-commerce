@@ -15,7 +15,10 @@ constructor(private _productService:ProductService){
 }
 
 addToCart(productId:string){
-  this._productService.postProductToCart(productId).subscribe( (res)=>console.log(res));
+  this._productService.postProductToCart(productId).subscribe( (res)=>{console.log(res);
+  this._productService.productCount.next(res.numOfCartItems)
+  })
+ 
      
 }
 }

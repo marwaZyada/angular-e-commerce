@@ -9,18 +9,21 @@
           <li class="nav-item">
             <a class="nav-link " aria-current="page" routerLink="home" routerLinkActive="active">home</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" routerLink="cart" routerLinkActive="active">cart</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="products" routerLinkActive="active">product</a>
+            <a class="nav-link" routerLink="/categories" routerLinkActive="active">categories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="categories" routerLinkActive="active">categories</a>
+            <a class="nav-link" routerLink="/brands" routerLinkActive="active">brands</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="brands" routerLinkActive="active">brands</a>
-          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/allorders" routerLinkActive="active">orders</a>
+          </li> -->
           
           </ul>
           
@@ -35,13 +38,19 @@
       </ul>
       <ul class="navbar-nav gap-2 text-capitalize  fs-5">
         <li *ngIf="!_dataService.token" class="nav-item">
-          <a class="nav-link" routerLink="register"  routerLinkActive="active">register</a>
+          <a class="nav-link" routerLink="/register"  routerLinkActive="active">register</a>
         </li>
           <li *ngIf="!_dataService.token" class="nav-item">
-            <a class="nav-link" routerLink="signin"  routerLinkActive="active">signIn</a>
+            <a class="nav-link" routerLink="/signin"  routerLinkActive="active">signIn</a>
           </li>
           <li *ngIf="_dataService.token" class="nav-item">
-            <a class="nav-link" routerLink="signout"  routerLinkActive="active" (click)="_dataService.logout()">signOut</a>
+            <a class="nav-link"  href="#" (click)="_dataService.logout()">signOut</a>
+          </li>
+          <li *ngIf="_dataService.token" class="nav-item" >
+            <a class="nav-link position-relative" routerLink="cart"  routerLinkActive="active" >
+              <i class="fas fa-shopping-cart text-green p-2"></i>
+              <span class="badge bg-green position-absolute top-0 end-0">{{count}}</span>
+            </a>
           </li>
       </ul>
     </div>
