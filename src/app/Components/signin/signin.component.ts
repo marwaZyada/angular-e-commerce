@@ -25,6 +25,8 @@ export class SigninComponent {
     try{
 this._dataService.login(this.loginForm.value).subscribe({
   next:(res)=>{
+    console.log(res);
+    
 if(res.message=='success'){
   localStorage.setItem('token',res.token);
   this._dataService.token=res.token;

@@ -13,6 +13,8 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
    if(localStorage.getItem('token')!=null){
   try{  jwtDecode(localStorage.getItem('token')||"")
+
+
     return true;
    }catch(error){
     localStorage.removeItem('token')
