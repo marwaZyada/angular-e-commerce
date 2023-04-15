@@ -11,7 +11,7 @@ import { LoadingInterceptor } from 'src/app/loading.interceptor';
 })
 export class CartComponent implements OnInit{
 products:any[]=[]
-
+flag:any;
 setTimeOutCount:any;
 id!:string
 userId:string='';
@@ -20,6 +20,8 @@ constructor(public _productService:ProductService,public _LoadService:LoadServic
 }
 
 ngOnInit(): void {
+this._LoadService.flag.subscribe(value=>this.flag=value)
+
   this._productService.getCartData().subscribe({
     next:(res)=>{
       console.log(res);

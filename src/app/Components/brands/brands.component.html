@@ -1,9 +1,10 @@
-<div class="d-flex justify-content-center align-items-center mt-5">
+<!-- <div class="d-flex justify-content-center align-items-center mt-5">
     <div class="spinner-border " role="status" *ngIf="brands.length==0 ; else show">
         <span class="sr-only">Loading...</span>
       </div>
-    </div>
-    <ng-template #show>
+    </div> -->
+    <app-loader></app-loader>
+    <!-- <ng-template #show> -->
 <div class="row">
     <div class="col-3" *ngFor="let brand of brands">
         <div class="content text-center">
@@ -12,4 +13,4 @@
         </div>
     </div>
 </div>
-    </ng-template>
+    <!-- </ng-template> -->

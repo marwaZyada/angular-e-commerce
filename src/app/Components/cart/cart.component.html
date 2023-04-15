@@ -4,8 +4,9 @@
     <span class="sr-only">Loading...</span>
   </div>
 </div> -->
-<app-loader></app-loader>
-<!-- <ng-template #show> -->
+<app-loader ></app-loader>
+   
+  <div *ngIf="flag==false ">
   <button
     class="btn btn-primary d-block ms-auto text-capitalize"
     (click)="clearCart();products=[]"
@@ -49,4 +50,4 @@
     </div>
   </div>
   <button class='btn btn-primary d-block mx-auto text-capitalize mt-5' routerLink='/checkout/{{id}}'>checkout</button>
-<!-- </ng-template> -->
+</div>

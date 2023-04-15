@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { LoadService } from 'src/app/load.service';
 
 @Component({
@@ -7,9 +7,12 @@ import { LoadService } from 'src/app/load.service';
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.css']
 })
-export class LoaderComponent {
-  flag:Subject<boolean>= this._LoadService.flag;
+export class LoaderComponent implements OnInit{
+
   constructor(public _LoadService:LoadService){
- this.flag.subscribe(value=>console.log(value) )
+
+  }
+  ngOnInit(): void {
+
   }
 }
