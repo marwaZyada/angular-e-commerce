@@ -14,3 +14,16 @@ background-color: var(--lightGray);
 img{
     margin-bottom: 10px;
 }
+/* position-absolute top-0 end-0 */
+.pos-budge{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+@media screen and (max-width:990px){
+   .pos-budge{
+    left:28px;
+    width: fit-content;
+   }
+    
+}

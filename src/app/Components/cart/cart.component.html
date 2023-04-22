@@ -15,25 +15,24 @@
   </button>
 
   <div
-    class="content d-flex justify-content-between align-items-center mb-1"
+    class="row  align-items-center mb-3 "
     *ngFor="let product of products;let i = index"
   >
-    <img
+  <div class="col-lg-2"><img
       [src]="product.product.imageCover"
       width="50"
       height="50"
       alt=""
       class=""
-    />
-    <p>{{ product.product.title }}</p>
-    <h4>{{ product.price | currency }}</h4>
+    /></div>
+    <div class="col-lg-3"><p>{{ product.product.title }}</p></div>
+    <div class="col-lg-2"><h4>{{ product.price | currency }}</h4></div>
 
-    <span
+    <div class="col-lg- my-2"><button
       (click)="removeProductFromCart(product.product.id);products.splice(i,1)"
-      class="text-secondary cursor-pointer"
-      >remove</span
-    >
-    <div>
+      class=" btn btn-primary"
+      >remove</button></div>
+    <div class="col-lg-3">
       <button
         class="btn btn-primary"
         (click)="updateCount(product.count + 1, product.product.id);product.count=product.count+1"
